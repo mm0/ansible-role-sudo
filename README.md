@@ -8,7 +8,7 @@ Allows you to specify a different list of users with specific sudoers permission
 
 See Also: ansible-role-sudo, ansible-role-bash
 
-![travis-ci](https://travis-ci.org/mm0/ansible-role-user.svg?branch=master)
+![travis-ci](https://travis-ci.org/mm0/ansible-role-sudo.svg?branch=master)
 
 ## Requirements
 
