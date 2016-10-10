@@ -1,0 +1,9 @@
+- hosts: all
+  vars:
+    users:
+      ubuntu:
+        state: present
+        groups:  sudo,ubuntu
+        sudo: "ALL=(ALL) NOPASSWD: ALL"
+  roles:
+  - ansible-role-sudo
