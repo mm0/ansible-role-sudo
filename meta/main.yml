@@ -6,12 +6,16 @@ An Ansible role that configures sudoers file
 
 Allows you to specify a different list of users with specific sudoers permission string for each host group or within a playbook"
   company: 
-  license: MIT
+  license: BSD2
   min_ansible_version: 2.0
   platforms:
-  - name: All
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
     versions:
     - all
   galaxy_tags:
+    - system
+    - cloud
 dependencies:
-
