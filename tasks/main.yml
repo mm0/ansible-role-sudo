@@ -1,6 +1,6 @@
 ---
 - name: Create file in sudoers.d
-  lineinfile: dest="/etc/sudoers.d/{{ item.key }}" line="{{ item.key }} {{ item.sudo }}" owner=root group=root mode=440 validate='visudo -cf %s'
+  lineinfile: dest="/etc/sudoers.d/{{ item.key }}" line="{{ item.key }} {{ item.value.sudo }}" owner=root group=root mode=440 validate='visudo -cf %s' create=yes
   with_dict: "{{users}}"
 
 - name: Copy Sudoers File
