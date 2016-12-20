@@ -1,3 +1,9 @@
+
+
+  - name: Create file in sudoers.d
+    lineinfile: dest=/etc/sudoers.d/{{ item.key }} line="{{ item.key }} {{ item.sudo }}" owner=root group=root mode=440 validate='visudo -cf %s'
+    with_items: users
+
   - name: Copy Sudoers File
     template: src=sudoers.j2 dest=/etc/sudoers validate='visudo -cf %s' owner=root group=root mode=440
     become: yes

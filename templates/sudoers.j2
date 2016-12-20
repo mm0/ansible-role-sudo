@@ -25,16 +25,4 @@ root	ALL=(ALL:ALL) ALL
 %sudo	ALL=(ALL:ALL) ALL
 
 # See sudoers(5) for more information on "#include" directives:
-{% if custom_sudo is defined %}
-{% for key,user  in custom_sudo.items() %}
-{{ key }} {{ user.sudo }}
-{% endfor %}
-{% endif %}
-
-#includedir /etc/suoers.d
-{% for key,user  in  users.items()  %}
-{% if user.sudo %}
-{{ key }} {{ user.sudo }}
-{% endif %}
-{% endfor %}
-
+#includedir /etc/sudoers.d
